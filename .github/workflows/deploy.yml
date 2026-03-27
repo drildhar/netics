@@ -37,6 +37,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/netics-api:latest
             docker stop netics-app || true
@@ -49,6 +50,7 @@ jobs:
           playbook: ansible/playbook.yml
           directory: ./
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           inventory: |
             [vps]
             ${{ secrets.SSH_HOST }} ansible_user=${{ secrets.SSH_USER }}
