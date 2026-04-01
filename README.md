@@ -34,4 +34,4 @@ Workflow CI/CD diatur untuk berjalan otomatis setiap kali ada `push` ke branch `
 ## 5. Informasi Akses
 - **URL API:** `http://redacted/health`
 - **Port API:** `3000`
-- **Status Deployment:** Berhasil melalui GitHub Actions.
+- **Status Deployment:** Tidak berhasil melalui GitHub Actions.
